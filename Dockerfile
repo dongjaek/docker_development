@@ -25,7 +25,6 @@ ENV HOME /home/docker
 WORKDIR /home/docker
 
 # Setup vim environment
-ADD .vimrc /home/docker/.vimrc
 # Install pathogen
 RUN mkdir -p /home/docker/.vim/autoload /home/docker/.vim/bundle 
 RUN curl -LSso /home/docker/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
@@ -35,5 +34,7 @@ RUN curl -LSso /home/docker/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.v
 # Install nerdtree
 RUN cd /home/docker/.vim/bundle
 RUN git clone https://github.com/scrooloose/nerdtree.git
+# Add the vimrc (vim configuration) file
+ADD .vimrc /home/docker/.vimrc
 
 CMD /bin/bash
