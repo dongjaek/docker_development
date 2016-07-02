@@ -29,8 +29,8 @@ WORKDIR /home/docker
 RUN mkdir -p /home/docker/.vim/autoload /home/docker/.vim/bundle 
 RUN curl -LSso /home/docker/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 # Install syntastic
-RUN mkdir -p /home/docker/.vim/autoload /home/docker/.vim/bundle
-RUN curl -LSso /home/docker/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+RUN cd /home/docker/.vim/bundle 
+RUN git clone https://github.com/scrooloose/syntastic.git
 # Install nerdtree
 RUN cd /home/docker/.vim/bundle
 RUN git clone https://github.com/scrooloose/nerdtree.git
