@@ -14,7 +14,8 @@ RUN apt-get update && apt-get install -y \
 	pkg-config \ 
 	build-essential \ 
 	autoconf \
-	automake 
+	automake \
+	curl
 RUN apt-get autoremove
 
 # Setup user
