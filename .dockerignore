@@ -1,0 +1,2 @@
+# Ignore file for building docker images
+*.swp
